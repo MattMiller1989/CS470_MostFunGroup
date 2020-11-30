@@ -49,14 +49,13 @@ CREATE TABLE policy (
    FOREIGN KEY (type_id) REFERENCES type(id)
 );
 
-CREATE TABLE type (
-   id INT NOT NULL,
+CREATE TABLE policy_type (
+   id INT NOT NULL auto_increment,
    type_name VARCHAR(50),
    price_modifier FLOAT DEFAULT NULL,
    
    PRIMARY KEY(id)
 );
-
 /* BEFORE ANY DATA CAN BE LOADED, THE STORED PROCEDURES AND TRIGGERS SHOULD BE CREATED. */
 
 -- Matt
